@@ -1,0 +1,27 @@
+CREATE OR REPLACE FUNCTION findSum(n IN number)
+RETURN number IS
+  -- n number := 5;
+   s number := 0;
+   tres number := 0;
+   cinco number := 0;
+   tr number := 0;
+   ci number := 0;
+   j number := 1;
+BEGIN
+WHILE j <= n
+LOOP
+t := 3 mod j;
+c := 5 mod j;
+ IF t = 0 then
+    tres := tres + j;
+  END IF;
+  IF c = 0 THEN
+  cinco := cinco + i; 
+  END IF;
+  j := j + 1;
+  END LOOP;
+  s := tres + cinco;
+  RETURN s;
+END;
+
+SELECT findSum(5) FROM DUAL;
